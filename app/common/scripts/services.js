@@ -1,6 +1,6 @@
-angular.module(shared, [])
+angular.module('shared', [])
 
-.factory('dataService'){
+.factory('dataService', function(){
     var service = {};
     var tours = [];
 
@@ -13,4 +13,4 @@ angular.module(shared, [])
     };
 
     return service;
-};
+});
