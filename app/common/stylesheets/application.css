@@ -1,5 +1,45 @@
-.supersonic-navbar-mock {
-  background-color: #00B5FF !important;
+.supersonic-navbar {
+  background-color: black !important;
   text-align: center;
   font-weight: 600;
+}
+
+.redtour {
+	background-color: darkred;
+	color: white;
+}
+
+.redtext {
+	background-color: red;
+	color: white;
+}
+
+.bluetour {
+	background-color: darkblue;
+	color: white;
+}
+
+.bluetext {
+	background-color: blue;
+	color: white;
+}
+
+.purpletour {
+	background-color: #4D004D;
+	color: white;
+}
+
+.purpletext {
+	background-color: #993399;
+	color: white;
+}
+
+.blacktour {
+	background-color: black;
+	color: white;
+}
+
+.blacktext {
+	background-color: #333333;
+	color: white;
 }
