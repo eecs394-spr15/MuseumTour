@@ -1,5 +1,5 @@
 angular
-  .module('TourApp')
+  .module('tour', [])
   .controller('TourController', function($scope) {
 
     $scope.id = steroids.view.params.id;

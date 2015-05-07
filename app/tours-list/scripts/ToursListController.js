@@ -1,7 +1,9 @@
 angular
-  .module('ToursList')
-  .controller('ToursListController', function($scope, supersonic) {
+  .module('tours-list', [])
+  .controller('ToursListController', function($scope) {
 
-    $scope.navbarTitle = "Learn More";
+    $scope.app = {
+        welcome: "Welcome to the Hull House!"
+    };
 
   });

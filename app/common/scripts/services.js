@@ -1,4 +1,4 @@
-angular.module('shared', [])
+angular.module('common', [])
 
 .factory('dataService', function(){
     var service = {};
