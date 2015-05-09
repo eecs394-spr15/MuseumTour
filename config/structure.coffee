@@ -9,6 +9,11 @@ module.exports =
       id: "tours-list"
       location: "tours-list#tours-list" # Supersonic module#view type navigation
     }
+    {
+      title: "Settings"
+      id: "settings"
+      location: "settings#settings" # Supersonic module#view type navigation
+    }
   ]
 
   # rootView:
