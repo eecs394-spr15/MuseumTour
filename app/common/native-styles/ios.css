@@ -4,7 +4,7 @@
  ***********************************************************/
 
 navigation-bar {
-  background-color: #00B5FF;
+  background-color: black;
   color: #ffffff;
 }
 
@@ -38,7 +38,7 @@ tab-bar-item#settings {
   background-image: url(icons/cog.svg);
 }
 
-tab-bar-item#index {
+tab-bar-item#tours-list {
   background-image: url(icons/home.svg);
 }
 

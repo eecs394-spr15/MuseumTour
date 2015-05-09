@@ -1,0 +1,19 @@
+<div class="padding" ng-controller="ToursListController">
+
+  <super-navbar>
+    <super-navbar-title ng-bind="app.welcome">
+    </super-navbar-title>
+  </super-navbar>
+
+  <super-navigate ng-repeat="tour in tours" view-id="tour#index?id={{$index}}">
+    <div class="card">
+      <div class="item item-divider {{tour.tourClass}}">
+        {{tour.name}}
+      </div>
+      <div class="item item-text-wrap {{tour.textClass}}">
+        {{tour.description}}
+      </div>
+    </div>
+  </super-navigate>
+
+</div>

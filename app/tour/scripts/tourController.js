@@ -1,10 +1,8 @@
 angular
-  .module('example')
-  .controller('TourController', function($scope, supersonic) {
+  .module('tour', ['common'])
+  .controller('TourController', function($scope, DataService) {
 
-    $scope.tour = {
-        title: "Scavenger hunt",
-        description: "Get ready for a super awesome scavenger hunt!"
-    };
-
+    var index = steroids.view.params.id;
+    $scope.tour = DataService.getTourByIndex(index);
+    
   });
