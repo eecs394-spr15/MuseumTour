@@ -19,6 +19,9 @@ module.exports =
   # rootView:
   #   location: "tours-list#tours-list"
 
+  rootView:
+    location: "tourList#index"
+
   preloads: [
     {
       id: "tours-list"
