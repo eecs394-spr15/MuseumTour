@@ -1,11 +1,6 @@
+var app = angular.module('common');
 
-angular.module('common', [])
-
-.constant('constants', {
-  'list_tab': 0
-})
-
-.factory('DataService', function($http){
+app.factory('DataService', function($http){
 
 
     var dataService = {};
