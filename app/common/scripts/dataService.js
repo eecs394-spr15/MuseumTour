@@ -1,35 +1,67 @@
 var app = angular.module('common');
 
-app.factory('DataService', function($http){
+app.factory('LocalStorageService', function($window){
+
+    var service = {};
+
+    service.initTours = function() {
+        return getData("https://api.myjson.com/bins/1gybl", "tour-data");
+    };
+
+    service.getData = function(url, key) {
+        var jsonData = angular.fromJson($window.localStorage[key]);
+        if (jsonData == undefined) {
+            $http( {
+                method: 'GET',
+                url: url
+            })
+            .success(function(data,status,header,config) {
+                console.log("Tour json: " + data)
+                steroids.logger.log(data)
+                $window.localStorage.setItem("tour-data", angular.toJson(data));
+                jsonData = angular.fromJson($window.localStorage["tour-data"]);
+            })  
+        }
+        steroids.logger.log("JSON DATA: " + angular.toJson(jsonData))
+        return jsonData
+    };
+
+    return service;
+});
+
+app.factory('DataService', function($http, LocalStorageService){
 
 
     var dataService = {};
-    var tours = [
-    	{
-    		name: 'Red Tour',
-    		tourClass: 'redtour',
-    		textClass: 'redtext',
-    		description: 'The red tour is an ordered tour through the museum!'
-    	},
-    	{
-    		name: 'Blue Tour',
-    		tourClass: 'bluetour',
-    		textClass: 'bluetext',
-    		description: 'The blue tour is an random tour through the museum!'
-    	},
-    	{
-    		name: 'Purple Tour',
-    		tourClass: 'purpletour',
-    		textClass: 'purpletext',
-    		description: 'The purple tour is a scavenger hunt setup in the museum!'
-    	},
-    	{
-    		name: 'Black Tour',
-    		tourClass: 'blacktour',
-    		textClass: 'blacktext',
-    		description: 'The black tour is a tour that takes you to objects often overlooked in the museum!'
-    	}
-    ];
+
+    var tours = LocalStorageService.initTours();
+
+    // var tours = [
+    // 	{
+    // 		name: 'Red Tour',
+    // 		tourClass: 'redtour',
+    // 		textClass: 'redtext',
+    // 		description: 'The red tour is an ordered tour through the museum!'
+    // 	},
+    // 	{
+    // 		name: 'Blue Tour',
+    // 		tourClass: 'bluetour',
+    // 		textClass: 'bluetext',
+    // 		description: 'The blue tour is an random tour through the museum!'
+    // 	},
+    // 	{
+    // 		name: 'Purple Tour',
+    // 		tourClass: 'purpletour',
+    // 		textClass: 'purpletext',
+    // 		description: 'The purple tour is a scavenger hunt setup in the museum!'
+    // 	},
+    // 	{
+    // 		name: 'Black Tour',
+    // 		tourClass: 'blacktour',
+    // 		textClass: 'blacktext',
+    // 		description: 'The black tour is a tour that takes you to objects often overlooked in the museum!'
+    // 	}
+    // ];
 
     var config = [
     {
