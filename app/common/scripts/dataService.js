@@ -1,18 +1,40 @@
 var app = angular.module('common');
 
-app.factory('DataService', function($http){
+app.factory('LocalStorageService', function($window){
+
+    var service = {};
+
+    service.initTours = function() {
+        return getData("https://api.myjson.com/bins/1gybl", "tour-data");
+    };
+
+    service.getData = function(url, key) {
+        var jsonData = angular.fromJson($window.localStorage[key]);
+        if (jsonData == undefined) {
+            $http( {
+                method: 'GET',
+                url: url
+            })
+            .success(function(data,status,header,config) {
+                console.log("Tour json: " + data)
+                steroids.logger.log(data)
+                $window.localStorage.setItem("tour-data", angular.toJson(data));
+                jsonData = angular.fromJson($window.localStorage["tour-data"]);
+            })  
+        }
+        steroids.logger.log("JSON DATA: " + angular.toJson(jsonData))
+        return jsonData
+    };
+
+    return service;
+});
+
+app.factory('DataService', function($http, LocalStorageService){
 
 
     var dataService = {};
 
-    $http( {
-      method: 'GET',
-      url: 'https://api.myjson.com/bins/3wm6p'
-    })
-    .success(function(data,status,header,config) {
-        console.log("Tour json: " + data)
-        steroids.logger.log(data)
-    }) 
+    var tours = LocalStorageService.initTours();
 
     // var tours = [
     // 	{
