@@ -29,6 +29,10 @@ module.exports =
     }
   ]
 
+  initialView:
+    id: "splash"
+    location: "splash#splash_page"
+
   # drawers:
   #   left:
   #     id: "leftDrawer"
@@ -38,5 +42,5 @@ module.exports =
   #     animation: "swingingDoor"
   #
   # initialView:
-  #   id: "initialView"
-  #   location: "example#initial-view"
+  #   id: "splash"
+  #   location: "splash#splash_page"
