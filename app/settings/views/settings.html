@@ -7,14 +7,18 @@
   </super-navbar>
 
   <ul class="list">
-    <li ng-repeat="setting in config" ng-class="classes[setting.type]">
-      <div compile-template ng-bind-html="to_trusted(templates[setting.type])"></div>
+    <li ng-repeat="setting in getConfig()" ng-class="classes[setting.type]">
+      <div compile-template ng-bind-html="to_trusted(getTemplate(setting.type))"></div>
     </li>
   </ul>
+  
+  <button class="button button-block button-positive" onclick="supersonic.ui.tabs.select(0)">
+  Done
+  </button>
 
   <div>
     Current settings:
-    <div ng-repeat="setting in config">
+    <div ng-repeat="setting in getConfig()">
       {{setting.value}}
     </div>
   </div>
