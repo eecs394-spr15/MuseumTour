@@ -1,5 +1,9 @@
 
-angular.module('common', []).factory('DataService', function($http){
+angular.module('common', [])
+
+.factory('DataService', function($http){
+
+
     var dataService = {};
     var tours = [
     	{
@@ -45,3 +49,5 @@ angular.module('common', []).factory('DataService', function($http){
 
     return dataService;
 });
+
+
