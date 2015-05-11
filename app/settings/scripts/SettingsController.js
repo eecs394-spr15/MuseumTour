@@ -1,6 +1,6 @@
 angular
-  .module('settings')
-  .controller('SettingsController', function($scope, $sce, DataService) {
+  .module('settings', ['common'])
+  .controller('SettingsController', function($scope, $sce, DataService, constants) {
 
     $scope.getConfig = function(){
         return DataService.getConfig();

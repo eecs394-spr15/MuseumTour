@@ -1,6 +1,10 @@
 
 angular.module('common', [])
 
+.constant('constants', {
+  'list_tab': 0
+})
+
 .factory('DataService', function($http){
 
 
