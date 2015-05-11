@@ -1,0 +1,22 @@
+<div class="padding" ng-controller="SettingsController">
+
+  <super-navbar>
+    <super-navbar-title>
+      Settings
+    </super-navbar-title>
+  </super-navbar>
+
+  <ul class="list">
+    <li ng-repeat="setting in config" ng-class="classes[setting.type]">
+      <div compile-template ng-bind-html="to_trusted(templates[setting.type])"></div>
+    </li>
+  </ul>
+
+  <div>
+    Current settings:
+    <div ng-repeat="setting in config">
+      {{setting.value}}
+    </div>
+  </div>
+
+</div>
