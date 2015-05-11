@@ -3,7 +3,10 @@
     <super-navbar>
         <super-navbar-title>Login</super-navbar-title>
     </super-navbar>
-    <p ng-hide="show">
+
+
+
+    <div class="showF" ng-hide="forc">
         <div align="center">
             <div class="padding">
                 <h1>        </h1>
@@ -40,9 +43,12 @@
             <button class="button button-large button-outline button-positive" >
                 Link     
             </button>
-        <div>
-    </p>
-    <p ng-show="show">
+        </div>
+    </div>
+
+
+
+    <div class="showC" ng-show="forc">
         <div align="center">
             <div class="padding">
                 <h1>        </h1>
@@ -79,10 +85,20 @@
             <button class="button button-large button-outline button-positive" >
                 Start     
             </button>
-        <div>
-    </p>
+        </div>
+    </div>
+    <div class="padding">
+        <h1>        </h1>
+        <h1>        </h1>
+        <h1>        </h1>
+        <h1>        </h1>
+        <h1>        </h1>
+        <h1>        </h1>
+    </div>
     <div align="center">
         <button class="button button-small button-outline " ng-click="choice(0)">Sign in by Facebook</button>
         <button class="button button-small button-outline " ng-click="choice(1)">Create new account</button>
     </div>
+
+
 </div>

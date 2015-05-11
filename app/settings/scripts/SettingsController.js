@@ -1,7 +1,7 @@
 angular
   .module('settings')
   .controller('SettingsController', function($scope, $sce) {
-    $scope.test = "testing"
+    $scope.test = "testing";
     $scope.config = [
     {
         type: "toggle",
