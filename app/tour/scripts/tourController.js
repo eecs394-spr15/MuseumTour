@@ -2,34 +2,16 @@ angular.module('tour', ['common'])
   .controller('TourController', function($scope, $http, DataService) {
     var index = steroids.view.params.id;
     $scope.tour = DataService.getTourByIndex(index);
+
+    // $http.get("app/tour/views/test.json")
+    // .success(function(data, status) {
+    // 	navigator.notification.alert("success " + status);
+    // 	$scope.names = data.records;
+    // }).
+    // error(function(status) {
+    // 	navigator.notification.alert("fail " + status);
+    // });
+
+
 });
-
-//   .config(function (RestangularProvider) {
-//   	RestangularProvider.setBaseUrl('/');
-// })
-
-// angular.module('tour', ['common','restangular'])
-
-// 	.factory('myRestangular', function(Restangular) {
-
-// 	  return Restangular.withConfig(function(RestangularConfigurer) {
-
-// 	    RestangularConfigurer.setBaseUrl('http://localhost/');
-// 	    RestangularConfigurer.setRequestSuffix('.json');
-
-// 	    // RestangularConfigurer.setRestangularFields({
-// 	    //   id: "app_id"
-// 	    // });
-
-//   	})
-
-// 	.controller('TourController', function($scope, $http, DataService, myRestangular) {
-// 		 // navigator.notification.alert('test: ');
-// 		 // $scope.names = myRestangular.all('test').getList();
-// 	    var index = steroids.view.params.id;
-// 	    $scope.tour = DataService.getTourByIndex(index);
-// 	})
-
-
-// });
 
