@@ -12,7 +12,7 @@ module.exports =
   ]
 
   # rootView:
-  #   location: "tours-list#tours-list"
+  #   location: "splash#splash_page"
 
   preloads: [
     {
