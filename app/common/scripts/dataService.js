@@ -34,6 +34,10 @@ app.factory('LocalStorageService', function($http, $window){
         return service.getData("https://api.myjson.com/bins/439dt", "templates");
     };
 
+    service.saveData = function(key, data){
+        $window.localStorage.setItem(key, angular.toJson(data));
+    };
+
     return service;
 });
 
