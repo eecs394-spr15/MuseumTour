@@ -19,8 +19,8 @@ module.exports =
   #rootView:
   #  location: "splash#splash"
 
-  rootView:
-    location: "tourList#index"
+  # rootView:
+  #   location: "tourList#index"
 
   preloads: [
     {
@@ -29,9 +29,9 @@ module.exports =
     }
   ]
 
-  #initialView:
-  #  id: "splash"
-  #  location: "splash#splash"
+  initialView:
+    id: "splash"
+    location: "splash#splash"
 
   # drawers:
   #   left:
