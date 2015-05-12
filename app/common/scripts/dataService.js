@@ -9,6 +9,7 @@ app.factory('LocalStorageService', function($http, $window){
     };
 
     service.getData = function(url, key) {
+        var jsonData = {};
         //var jsonData = angular.fromJson($window.localStorage[key]);
         //if (jsonData == undefined) {
             $http( {
@@ -20,11 +21,8 @@ app.factory('LocalStorageService', function($http, $window){
                 steroids.logger.log(data)
                 $window.localStorage.setItem(key, angular.toJson(data));
                 jsonData = data;
-            })  
+            });
         //}
-        steroids.logger.log("JSON DATA: " + angular.toJson(jsonData));
-
-        }
         return jsonData;
     };
     
@@ -39,6 +37,10 @@ app.factory('LocalStorageService', function($http, $window){
 
     service.initTemplates = function(){
         return service.getData("https://api.myjson.com/bins/439dt", "templates");
+    };
+
+    service.saveData = function(key, data){
+        $window.localStorage.setItem(key, angular.toJson(data));
     };
 
     return service;
