@@ -17,7 +17,7 @@ module.exports =
   ]
 
   rootView:
-    location: "splash#splash_page"
+    location: "splash#splash"
 
   #rootView:
     #location: "tourList#index"
@@ -25,13 +25,13 @@ module.exports =
   preloads: [
     {
       id: "splash"
-      location: "splash#splash_page"
+      location: "splash#splash"
     }
   ]
 
   initialView:
     id: "splash"
-    location: "splash#splash_page"
+    location: "splash#splash"
 
   # drawers:
   #   left:
