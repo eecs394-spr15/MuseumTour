@@ -1,6 +1,7 @@
 angular.module('tour', ['common'])
   .controller('TourController', function($scope, $http, DataService) {
     var index = steroids.view.params.id;
+    $scope.tourIndex = index;
     $scope.tour = DataService.getTourByIndex(index);
 
     // $http.get("app/tour/views/test.json")

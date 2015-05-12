@@ -16,10 +16,10 @@
 	<div class="item item-divider tour-name {{tour.text_class}}">
 		Points of Interest:
 	</div>
-	<a href="#" class="item item-icon-left" ng-repeat="poi in tour.poi">
+	<super-navigate class="item item-icon-left" ng-repeat="poi in tour.poi" view-id="poi#poi?id={{$index}}">
 		<i class="icon super-checkmark-round"></i>
 		{{poi.title}}
-	</a>
+	</super-navigate>
 
 </div>
 
