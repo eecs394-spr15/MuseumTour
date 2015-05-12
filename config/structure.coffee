@@ -16,26 +16,22 @@ module.exports =
     }
   ]
 
-  rootView:
-    location: "splash#splash"
-
   #rootView:
-    #location: "tourList#index"
+  #  location: "splash#splash"
+
+  rootView:
+    location: "tourList#index"
 
   preloads: [
     {
-      id: "splash"
-      location: "splash#splash"
+      id: "tours-list"
+      location: "tours-list#tours-list"
     }
   ]
 
-  # initialView:
-  #   id: "splash"
-  #   location: "splash#splash"
-
-  initialView:
-    id: "tours"
-    location: "tours-list#tours-list"
+  #initialView:
+  #  id: "splash"
+  #  location: "splash#splash"
 
   # drawers:
   #   left:
