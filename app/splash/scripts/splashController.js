@@ -12,11 +12,6 @@ angular
   })
 
   .controller('initViewDismissController', function($scope) {
-        $scope.test = "test";
-        $scope.dismissInit = function() {
-            // supersonic.ui.initialView.dismiss();
-            navigator.notification.alert("abc");
-        };
     })
 
   .controller('loginController', function($scope, $routeParams, $location) {
@@ -38,4 +33,4 @@ angular
     $scope.switch = function(){
         $location.path("/" + $scope.alt_link);
     };
-  });
+});
