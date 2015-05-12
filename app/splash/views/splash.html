@@ -1,71 +1,12 @@
-<div ng-app"splash">
+<div ng-controller="initViewDismissController">
 
-
-    <div ng-controller="initViewDismissController" >
-
-        <super-navbar>
-            <super-navbar-title>Hull House</super-navbar-title>
-            <super-navbar-button side="right" onclick="supersonic.ui.initialView.dismiss('slideFromRight')">
-            Skip
-            </super-navbar-button>
-        </super-navbar>
+    <super-navbar>
+        <super-navbar-title>Hull House</super-navbar-title>
+        <super-navbar-button side="right" onclick="supersonic.ui.initialView.dismiss('slideFromRight')">
+        Skip
+        </super-navbar-button>
+    </super-navbar>
     
-
-    
-    
-    <div ng-controller="splashController">
-        <div align="center">
-            <div class="padding">
-                <h1>        </h1>
-                <h1>        </h1>
-            </div>
-            <!-- <img src="/images/facebookIcon.jpg"> -->
-            <div class="padding">
-                <h1>        </h1>
-                <h2>        </h2>
-                <h3>        </h3>
-                <h4>        </h4>
-                <h5>        </h5>
-                <h1>        </h1>
-                <h2>        </h2>
-                <h3>        </h3>
-                <h4>        </h4>
-                <h5>        </h5>
-                <h3>Create your account</3>
-            </div>
-        </div>
-    </div>
-
-        <div class="list list-inset">
-            <label class="item item-input">
-                <input type="text" placeholder="Username">
-            </label>
-            <label class="item item-input">
-                <input type="text" placeholder="Password">
-            </label>
-        </div>
-    
-        <div class="padding">
-            <h1>        </h1>
-            <h1>        </h1>
-            <h1>        </h1>
-            <h1>        </h1>
-            <h1>        </h1>
-            <h1>        </h1>
-        </div>
-        <div align="center">
-            
-            <!-- <button class="button button-small button-outline">Use Facebook account</button> -->
-            <button class="button button-small button-outline">Create new account</button>
-            <br>
-            <br>
-            <b>or</b>
-            <br>
-            <br>
-            <img src="/images/facebook.png" width="115">
-        </div>
-
-
-    </div>
+    <div ng-view></div>
 
 </div>

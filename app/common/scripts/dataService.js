@@ -59,7 +59,6 @@ app.factory('DataService', function(LocalStorageService){
     };
 
     dataService.saveConfig = function(){
-        steroids.logger.log(config[0]);
         LocalStorageService.saveData('config', config);
     };
 
