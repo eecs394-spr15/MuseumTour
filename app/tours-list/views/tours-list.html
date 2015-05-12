@@ -7,10 +7,10 @@
 
   <super-navigate ng-repeat="tour in tours" view-id="tour#index?id={{$index}}">
     <div class="card">
-      <div class="item item-divider {{tour.tourClass}}">
+      <div class="item item-divider {{tour.tour_class}}">
         {{tour.tour_name}}
       </div>
-      <div class="item item-text-wrap {{tour.textClass}}">
+      <div class="item item-text-wrap {{tour.text_class}}">
         {{tour.tour_description}}
       </div>
     </div>
