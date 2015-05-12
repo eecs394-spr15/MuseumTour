@@ -20,7 +20,7 @@ angular
     };
   })
 
-  .directive('compileTemplate', ["$compile", "$parse", function($compile, $parse) {
+  .directive('compileTemplate', function($compile, $parse, DataService) {
     return {
         restrict: 'A',
         link: function($scope, element, attr) {
@@ -28,8 +28,9 @@ angular
             function value() { return (parse($scope) || '').toString(); }
 
             $scope.$watch(value, function() {
+                DataService.saveConfig();
                 $compile(element, null, -9999)($scope);
             });
         }
     };
-}]);
+});
