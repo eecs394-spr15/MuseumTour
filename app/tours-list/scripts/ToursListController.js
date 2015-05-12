@@ -7,4 +7,5 @@ angular
     };
     $scope.tours = DataService.getAllTours();
 
+
   });
