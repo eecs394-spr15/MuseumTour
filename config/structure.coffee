@@ -29,9 +29,13 @@ module.exports =
     }
   ]
 
+  # initialView:
+  #   id: "splash"
+  #   location: "splash#splash"
+
   initialView:
-    id: "splash"
-    location: "splash#splash"
+    id: "tours"
+    location: "tours-list#tours-list"
 
   # drawers:
   #   left:
