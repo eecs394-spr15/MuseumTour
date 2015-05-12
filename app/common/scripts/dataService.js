@@ -1,11 +1,11 @@
 var app = angular.module('common');
 
-app.factory('LocalStorageService', function($window){
+app.factory('LocalStorageService', function($http, $window){
 
     var service = {};
 
     service.initTours = function() {
-        return getData("https://api.myjson.com/bins/1gybl", "tour-data");
+        return service.getData("https://api.myjson.com/bins/1gybl", "tour-data");
     };
 
     service.getData = function(url, key) {
@@ -16,14 +16,14 @@ app.factory('LocalStorageService', function($window){
                 url: url
             })
             .success(function(data,status,header,config) {
-                console.log("Tour json: " + data)
-                steroids.logger.log(data)
+                console.log("Tour json: " + data);
+                steroids.logger.log(data);
                 $window.localStorage.setItem("tour-data", angular.toJson(data));
                 jsonData = angular.fromJson($window.localStorage["tour-data"]);
             })  
         }
-        steroids.logger.log("JSON DATA: " + angular.toJson(jsonData))
-        return jsonData
+        steroids.logger.log("JSON DATA: " + angular.toJson(jsonData));
+        return jsonData;
     };
 
     return service;
