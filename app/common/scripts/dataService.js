@@ -58,6 +58,10 @@ app.factory('DataService', function(LocalStorageService){
         return config;
     };
 
+    dataService.saveConfig = function(){
+        LocalStorageService.saveData('config', config);
+    };
+
     dataService.getTourByName = function(tourName){
         for (var i = 0; i < tours.length; i++) {
         	if (tours[i].name === tourName)
