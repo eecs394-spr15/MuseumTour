@@ -5,7 +5,7 @@ app.factory('LocalStorageService', function($http, $window){
     var service = {};
 
     service.initTours = function() {
-        return service.getData("https://api.myjson.com/bins/1gybl", "tour-data");
+        return service.getData("https://api.myjson.com/bins/331dd", "tour-data");
     };
 
     service.getData = function(url, key) {

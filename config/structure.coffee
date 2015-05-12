@@ -29,9 +29,9 @@ module.exports =
     }
   ]
 
-  initialView:
-    id: "splash"
-    location: "splash#splash_page"
+#  initialView:
+ #   id: "splash"
+  #  location: "splash#splash_page"
 
   # drawers:
   #   left:
