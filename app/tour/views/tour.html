@@ -1,0 +1,26 @@
+<div class="padding" ng-controller="TourController">
+	<super-navbar>
+	<super-navbar-title ng-bind="tour.tour_name"></super-navbar-title>
+</super-navbar>
+
+<div class="card {{tour.tour_class}}">
+	<div class="item item-divider tour-name {{tour.text_class}}">
+		{{tour.tour_name}}
+	</div>
+	<div class="item item-text-wrap">
+		{{tour.tour_description}}
+	</div>
+</div>
+
+<div class="list card">
+	<div class="item item-divider tour-name {{tour.text_class}}">
+		Points of Interest:
+	</div>
+	<a href="#" class="item item-icon-left" ng-repeat="poi in tour.poi">
+		<i class="icon super-checkmark-round"></i>
+		{{poi.title}}
+	</a>
+
+</div>
+
+</div>
