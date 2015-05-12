@@ -5,15 +5,18 @@
     </super-navbar-title>
   </super-navbar>
 
-  <super-navigate ng-repeat="tour in tours" view-id="tour#index?id={{$index}}">
+  <super-navigate ng-repeat="tour in tours" view-id="tour#tour?id={{$index}}">
     <div class="card">
-      <div class="item item-divider {{tour.tourClass}}">
-        {{tour.name}}
+      <div class="item item-divider {{tour.tour_class}}">
+        {{tour.tour_name}}
       </div>
-      <div class="item item-text-wrap {{tour.textClass}}">
-        {{tour.description}}
+      <div class="item item-text-wrap {{tour.text_class}}">
+        {{tour.tour_description}}
       </div>
     </div>
   </super-navigate>
+<!--   <super-navigate location="splash#splash">
+    <button >trans</button>
+  </super-navigate> -->
 
 </div>

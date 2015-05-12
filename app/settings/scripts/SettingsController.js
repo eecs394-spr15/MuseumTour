@@ -1,6 +1,6 @@
 angular
   .module('settings', ['common'])
-  .controller('SettingsController', function($scope, $sce, DataService, constants) {
+  .controller('SettingsController', function($scope, $sce, $interval, DataService, constants) {
 
     $scope.getConfig = function(){
         return DataService.getConfig();
@@ -18,9 +18,13 @@ angular
     $scope.getTemplate = function(ui_component){
         return DataService.getTemplate(ui_component);
     };
+
+    $scope.$watch($scope.getConfig, function() {
+        DataService.saveConfig();
+    }, true);
   })
 
-  .directive('compileTemplate', ["$compile", "$parse", function($compile, $parse) {
+  .directive('compileTemplate', function($compile, $parse, DataService) {
     return {
         restrict: 'A',
         link: function($scope, element, attr) {
@@ -32,4 +36,4 @@ angular
             });
         }
     };
-}]);
+});

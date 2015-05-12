@@ -4,42 +4,50 @@
   font-weight: 600;
 }
 
-.redtour {
-	background-color: darkred;
+.red-tour {
+	background-color: #8B0000;
 	color: white;
 }
 
-.redtext {
+.red-text {
 	background-color: red;
 	color: white;
 }
 
-.bluetour {
-	background-color: darkblue;
+.blue-tour {
+	background-color: #000080;
 	color: white;
 }
 
-.bluetext {
+.blue-text {
 	background-color: blue;
 	color: white;
 }
 
-.purpletour {
+.purple-tour {
 	background-color: #4D004D;
 	color: white;
 }
 
-.purpletext {
+.purple-text {
 	background-color: #993399;
 	color: white;
 }
 
-.blacktour {
+.black-tour {
 	background-color: black;
 	color: white;
 }
 
-.blacktext {
+.black-text {
 	background-color: #333333;
 	color: white;
+}
+
+.tour-info {
+	font-size: 150%;
+}
+
+.tour-name {
+	font-size: 150%;
 }
