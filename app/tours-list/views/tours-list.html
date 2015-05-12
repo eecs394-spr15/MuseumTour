@@ -5,7 +5,7 @@
     </super-navbar-title>
   </super-navbar>
 
-  <super-navigate ng-repeat="tour in tours" view-id="tour#index?id={{$index}}">
+  <super-navigate ng-repeat="tour in tours" view-id="tour#tour?id={{$index}}">
     <div class="card">
       <div class="item item-divider {{tour.tour_class}}">
         {{tour.tour_name}}
