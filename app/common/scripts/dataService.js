@@ -43,7 +43,6 @@ app.factory('LocalStorageService', function($http, $window){
 
 app.factory('DataService', function(LocalStorageService){
 
-
     var dataService = {};
 
     var tours = LocalStorageService.initTours();
@@ -59,8 +58,10 @@ app.factory('DataService', function(LocalStorageService){
     };
 
     dataService.saveConfig = function(){
+        steroids.logger.log(config[0]);
         LocalStorageService.saveData('config', config);
     };
+
 
     dataService.getTourByName = function(tourName){
         for (var i = 0; i < tours.length; i++) {
