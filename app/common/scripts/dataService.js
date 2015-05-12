@@ -11,8 +11,7 @@ app.factory('LocalStorageService', function($q, $http, $window){
     service.getData = function(url, key) {
         var deferred = $q.defer();
         var jsonData = angular.fromJson($window.localStorage[key]);
-        // var jsonData = undefined;
-        //if (jsonData === undefined) {
+        if (jsonData === undefined) {
             $http( {
                 method: 'GET',
                 url: url
@@ -25,10 +24,10 @@ app.factory('LocalStorageService', function($q, $http, $window){
             error(function(data, status, headers, config) {
                  deferred.reject(jsonData);
             });
-            return deferred.promise;
-        /*} else {
-            return jsonData;
-        }*/
+        } else {
+            deferred.resolve(jsonData);
+        }
+        return deferred.promise;
     };
 
     service.initConfig = function(){
