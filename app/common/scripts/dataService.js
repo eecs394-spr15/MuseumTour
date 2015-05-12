@@ -5,12 +5,12 @@ app.factory('LocalStorageService', function($http, $window){
     var service = {};
 
     service.initTours = function() {
-        return service.getData("https://api.myjson.com/bins/1gybl", "tour-data");
+        return service.getData("https://api.myjson.com/bins/4c1qp", "tour-data");
     };
 
     service.getData = function(url, key) {
-        var jsonData = angular.fromJson($window.localStorage[key]);
-        if (jsonData == undefined) {
+        //var jsonData = angular.fromJson($window.localStorage[key]);
+        //if (jsonData == undefined) {
             $http( {
                 method: 'GET',
                 url: url
@@ -21,7 +21,7 @@ app.factory('LocalStorageService', function($http, $window){
                 $window.localStorage.setItem("tour-data", angular.toJson(data));
                 jsonData = angular.fromJson($window.localStorage["tour-data"]);
             })  
-        }
+        //}
         steroids.logger.log("JSON DATA: " + angular.toJson(jsonData));
         return jsonData;
     };
