@@ -16,9 +16,6 @@ module.exports =
     }
   ]
 
-  #rootView:
-  #  location: "splash#splash"
-
   # rootView:
   #   location: "tourList#index"
 
@@ -27,15 +24,16 @@ module.exports =
       id: "tours-list"
       location: "tours-list#tours-list"
     }
+    {
+      id: "settings"
+      location: "tettings#settings"
+    }
   ]
 
   initialView:
     id: "splash"
     location: "splash#splash"
 
-#  initialView:
- #   id: "splash"
-  #  location: "splash#splash_page"
 
 
   # drawers:
@@ -45,7 +43,4 @@ module.exports =
   #     showOnAppLoad: false
   #   options:
   #     animation: "swingingDoor"
-  #
-  # initialView:
-  #   id: "splash"
-  #   location: "splash#splash_page"
+  
