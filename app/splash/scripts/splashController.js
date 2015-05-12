@@ -1,16 +1,16 @@
 angular
   .module('splash',[])
   .controller('splashController', function($scope) {
-    $scope.forc=false;
+    $scope.forc=true;
     //alert("...");
     $scope.choice=function(choi){
         if (choi==0)
         {
-            $scope.forc=false;
+            $scope.forc=true;
         }
         else
         {
-            $scope.forc=true;
+            $scope.forc=false;
         }
     };
 
