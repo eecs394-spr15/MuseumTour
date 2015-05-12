@@ -1,8 +1,13 @@
 <div class="padding" ng-controller="TourController">
-  <super-navbar>
-    <super-navbar-title ng-bind="tour.name"></super-navbar-title>
-  </super-navbar>
+  	<super-navbar>
+    	<super-navbar-title ng-bind="tour.tour_name"></super-navbar-title>
+  	</super-navbar>
 
+  	<div class="tour-info">
+		<p><b>{{tour.poi.description}}</b></p>
+		{{tour.poi.link}}
+	</div>
+	
   <p>{{tour.tour_description}}</p>
   <div ng-repeat="x in names">
   	<p>{{x.Name}}</p>

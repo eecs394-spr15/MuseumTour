@@ -33,6 +33,11 @@ module.exports =
   #  id: "splash"
   #  location: "splash#splash"
 
+#  initialView:
+ #   id: "splash"
+  #  location: "splash#splash_page"
+
+
   # drawers:
   #   left:
   #     id: "leftDrawer"
