@@ -5,7 +5,9 @@ angular
     $scope.app = {
         welcome: "Welcome to the Hull House!"
     };
-    $scope.tours = DataService.getAllTours();
+    $scope.getTours = function(){
+        return DataService.getAllTours();
+    }
 
 
   });

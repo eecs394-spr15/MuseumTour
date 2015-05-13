@@ -12,6 +12,7 @@ angular
   })
 
   .controller('initViewDismissController', function($scope) {
+    
     })
 
   .controller('loginController', function($scope, $routeParams, $location) {
